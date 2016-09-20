@@ -4,24 +4,27 @@
 	text-align: justify;
 }
 
-img{
-	height: 300px;
-	width: 100%;
-}
-
 #contenedor {
 	margin: auto;
-	padding: 2%;
-	background-color: #55ACEE;
+	padding: 15%;
+	background: url(../images/fondo.jpg);
+	max-width: 100%;
+	max-height: 700px;
+}
+
+h1 {
+	text-align: center;
+	font-family: verdana;
+	font-size: 30px;
+	color: #021C35;
 }
 
 #texto {
   overflow:hidden;
-  /* demo only: */
-  padding:10px;
+  padding:5px;
   width:250px;
   font-size:14px;
-  margin:50px auto;
+  margin:80px auto;
   display:block;
   border-radius:10px;
   border:6px solid #556677;
@@ -30,13 +33,22 @@ img{
 #contador {
 	height: 20px:
 	width: 7px;
+	background-color: #C1F1FF;
+	margin: 2%;
 }
 
 #enviar {
 	margin: 0 auto;
+	padding: 1%;
 	background-color: #1C9FF0;
 	color: white;
 	display: flex;
+}
+
+#mensaje {
+	margin: 2%;
+	background-color: #1C9FF0;
+	color: white;
 }
 
 .red {

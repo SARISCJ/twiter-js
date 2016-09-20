@@ -2,28 +2,48 @@ window.addEventListener("load", function() {
 	var color = ["red","violet","purple"];
 	var maximo = [120,130,140];
     var boton = document.getElementById("enviar");
+    
     boton.disabled = true;
     boton.addEventListener("click", function (e){
     	e.preventDefault();
+
     	var texto = document.getElementById("texto");
     	mensajes(texto.value);
  		texto.value = "";
  		contador.textContent = "140";
 	});
-    
+
 	function mensajes (texto) {
     	var contenedorMensaje = document.createElement("div");
 		contenedorMensaje.innerHTML = texto;
     	var mensajes = document.getElementById("mensaje");
-    	mensajes.insertBefore(contenedorMensaje, mensaje.childNodes[0]);
+    	mensajes.insertBefore(contenedorMensaje, mensajes.childNodes[0]);
+    	horaPost(contenedorMensaje);
 	}
+
+	function resize(){
+		txtArea.style.cssText = 'height:auto';
+	}
+
+	function horaPost(nombre){
+		var fecha = new Date();
+        var hora = fecha.getHours();
+        var minuto = fecha.getMinutes();
+            if (minuto < 10) {
+                minuto = "0" + minuto;
+            }
+        var post = "Posted " + hora + " : " + minuto + " ";
+        var hora = document.createElement("span");
+		hora.innerText = post;
+
+		nombre.insertBefore(hora,nombre.childNodes[0]);  
+    }
 
     var texto = document.getElementById("texto");
 	texto.addEventListener("keyup", function (){
 		boton.disabled = false;
 		caracteres(maximo, color);
 	}) 
-
 
 	function caracteres (maximo, color) {
 		var texto = document.getElementById("texto");
