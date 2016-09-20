@@ -10,7 +10,7 @@ window.addEventListener("load", function() {
  		texto.value = "";
  		contador.textContent = "140";
 	});
-
+    
 	function mensajes (texto) {
     	var contenedorMensaje = document.createElement("div");
 		contenedorMensaje.innerHTML = texto;
