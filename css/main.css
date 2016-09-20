@@ -32,14 +32,14 @@
 	display: flex;
 }
 
-.blue {
-	color: #69B9EC;
-}
-
 .red {
 	color: red;
 }
 
-.white {
-	color: white;
+.violet {
+	color: violet;
+}
+
+.purple {
+	color: purple;
 }
