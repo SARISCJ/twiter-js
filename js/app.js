@@ -18,11 +18,12 @@ window.addEventListener("load", function() {
 	}
 
     var texto = document.getElementById("texto");
-	texto.addEventListener("keypress", function (){
+	texto.addEventListener("keyup", function (){
 		boton.disabled = false;
-		caracteres();
+		caracteres(maximo, color);
 	}) 
 
+	
 	function caracteres (maximo, color) {
 		var texto = document.getElementById("texto");
 		var cantidadCaracteres = texto.value.length;
@@ -30,14 +31,14 @@ window.addEventListener("load", function() {
 		var contador = document.getElementById("contador");
 		contador.innerHTML = limite - cantidadCaracteres;
 
-       if(largo >= maximo[0] && largo < maximo[1]) {  //largo >= 120 y largo < 130
+       if(cantidadCaracteres >= maximo[0] && cantidadCaracteres < maximo[1]) {  //cantidadCaracteres >= 120 y cantidadCaracteres < 130
                contador.classList.remove(color[1]);
                 contador.classList.add(color[0]);
-       } else if(largo >= maximo[1] && largo < maximo[2]) {  //largo >= 130 y largo < 140
+       } else if(cantidadCaracteres >= maximo[1] && cantidadCaracteres < maximo[2]) {  //cantidadCaracteres >= 130 y cantidadCaracteres < 140
                contador.classList.remove(color[0]);
                contador.classList.remove(color[2]);
                contador.classList.add(color[1]);    
-       } else if(largo >= maximo[2]){//largo >= 140
+       } else if(cantidadCaracteres >= maximo[2]){//cantidadCaracteres >= 140
                contador.classList.remove(color[1]);
                contador.classList.add(color[2]);
                boton.disabled = true;
