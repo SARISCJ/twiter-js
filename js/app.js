@@ -23,7 +23,7 @@ window.addEventListener("load", function() {
 		caracteres(maximo, color);
 	}) 
 
-	
+
 	function caracteres (maximo, color) {
 		var texto = document.getElementById("texto");
 		var cantidadCaracteres = texto.value.length;
@@ -47,7 +47,20 @@ window.addEventListener("load", function() {
                    contador.classList.remove(color[i]);        
                };
        }
+	}
 
+	var textarea = document.querySelector('textarea');
+	textarea.addEventListener('keyup', autosize);
+
+	function autosize(){
+	  var parrafo = this;
+	  setTimeout(function(){
+	  	boton.disabled = false;
+	    parrafo.style.cssText = 'height:auto; padding:0';
+	    // for box-sizing other than "content-box" use:
+	    // parrafo.style.cssText = '-moz-box-sizing:content-box';
+	    parrafo.style.cssText = 'height:' + parrafo.scrollHeight + 'px';
+	  },0);
 	}
 });
 
