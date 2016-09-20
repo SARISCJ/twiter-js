@@ -4,6 +4,11 @@
 	text-align: justify;
 }
 
+img{
+	height: 300px;
+	width: 100%;
+}
+
 #contenedor {
 	margin: auto;
 	padding: 2%;

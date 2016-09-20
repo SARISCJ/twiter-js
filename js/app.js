@@ -8,6 +8,7 @@ window.addEventListener("load", function() {
     	var texto = document.getElementById("texto");
     	mensajes(texto.value);
  		texto.value = "";
+ 		contador.textContent = "140";
 	});
 
 	function mensajes (texto) {
@@ -50,12 +51,12 @@ window.addEventListener("load", function() {
 	}
 
 	var textarea = document.querySelector('textarea');
-	textarea.addEventListener('keyup', autosize);
+	textarea.addEventListener('keypress', autosize);
+	boton.disabled = false;
 
 	function autosize(){
 	  var parrafo = this;
 	  setTimeout(function(){
-	  	boton.disabled = false;
 	    parrafo.style.cssText = 'height:auto; padding:0';
 	    // for box-sizing other than "content-box" use:
 	    // parrafo.style.cssText = '-moz-box-sizing:content-box';
