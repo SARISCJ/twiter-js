@@ -1,0 +1,45 @@
+*{
+	font-family: Verdana;
+	font-size: 14px;
+	text-align: justify;
+}
+
+#contenedor {
+	margin: auto;
+	padding: 2%;
+	background-color: #55ACEE;
+}
+
+#texto {
+	border: 2px solid gray;
+	color: purple;
+	display: flex;
+	margin: auto;
+	height: 50%;
+	width: 50%;
+}
+
+#contador {
+	color: white;
+	height: 20px:
+	width: 7px;
+}
+
+#enviar {
+	margin: 0 auto;
+	background-color: #1C9FF0;
+	color: white;
+	display: flex;
+}
+
+.blue {
+	color: #69B9EC;
+}
+
+.red {
+	color: red;
+}
+
+.white {
+	color: white;
+}
